@@ -1,0 +1,27 @@
+{
+  "name": "ng-dat.gui",
+  "authors": [
+    "Jan-Willem Gmelig Meyling <j.gmeligmeyling@student.tudelft.nl>"
+  ],
+  "description": "dat.GUI optimized for Angular",
+  "main": "dist/ng-dat.gui.js",
+  "moduleType": [],
+  "keywords": [
+    "dat.gui"
+  ],
+  "license": "Apache License, Version 2.0",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dat-gui": "~0.5.1",
+    "angular": "~1.4.9",
+    "normalize-css": "~3.0.3",
+    "angular-bootstrap-colorpicker": "~3.0.23"
+  }
+}
