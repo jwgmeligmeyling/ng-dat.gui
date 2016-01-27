@@ -23,5 +23,6 @@
     "angular": "~1.4.9",
     "normalize-css": "~3.0.3",
     "angular-bootstrap-colorpicker": "~3.0.23"
-  }
+  },
+  "version": "1.0.0"
 }
