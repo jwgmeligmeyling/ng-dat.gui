@@ -197,6 +197,7 @@ a.guidat-toggle:hover {
 }
 
 dat-gui {
+  display: block;
   /** Clear list styles */
   /* Auto-place container */
   /* Auto-placed GUI's */

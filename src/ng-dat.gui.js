@@ -52,7 +52,7 @@ module.directive('datGui', function() {
 			closedLabel: '@',
 			openedLabel: '@'
 		},
-		template: '<div class="main" style="-webkit-user-select: none; width: 245px; position: absolute; top: 0px; right: 20px;" ng-hide="datGui.hidden">\
+		template: '<div class="main" ng-hide="datGui.hidden">\
 		<ul ng-transclude ng-hide="datGui.closed"></ul>\
 		<dat-gui-close-btn closed="datGui.closed" closed-label="{{closedLabel}}" opened-label="{{openedLabel}}"/>\
 		</div>'
