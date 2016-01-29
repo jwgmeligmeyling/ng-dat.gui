@@ -5,7 +5,7 @@
 <title></title>
 <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css"/>
 <link rel="stylesheet" href="../bower_components/angular-bootstrap-colorpicker/css/colorpicker.min.css"/>
-<link rel="stylesheet" href="../src/ng-dat.gui.css"/>
+<link rel="stylesheet" href="../dist/ng-dat.gui.css"/>
 <script src="../bower_components/angular/angular.min.js" type="application/javascript"></script>
 <script src="../bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.min.js" type="application/javascript"></script>
 <script src="../src/ng-dat.gui.js" type="application/javascript"></script>
@@ -14,7 +14,7 @@ angular.module('ExampleApp', ['dat.gui', 'colorpicker.module']);
 </script>
 </head>
 <body ng-app="ExampleApp">
-<dat-gui style="-webkit-user-select: none; width: 245px; position: absolute; top: 0px; right: 20px;" >
+<dat-gui style="-webkit-user-select: none; width: 245px; position: absolute; top: 0px; right: 20px;" light>
 	<dat-gui-control property-name="Wiehi">
 		<input type="text"/>
 	</dat-gui-control>

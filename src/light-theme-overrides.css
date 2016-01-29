@@ -1,0 +1,6 @@
+/**
+ * Fix the input text color from the light theme
+ */
+.dg .cr.string .c input[type=text]:not(:focus) {
+    color: #777;
+}

@@ -1,0 +1,9 @@
+/**
+ * Additional styles for use with the color picker
+ */
+.dg .cr.string input[colorpicker] {
+    text-align: center;
+    font-weight: bold;
+    color: #fff !important;
+    text-shadow: rgba(0, 0, 0, 0.701961) 0px 1px 1px;
+}

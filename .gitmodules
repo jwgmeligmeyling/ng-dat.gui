@@ -1,0 +1,3 @@
+[submodule "dat-gui-light-theme"]
+	path = dat-gui-light-theme
+	url = https://github.com/liabru/dat-gui-light-theme.git
