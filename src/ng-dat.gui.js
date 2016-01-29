@@ -9,17 +9,6 @@
 var module = angular.module('dat.gui', []);
 
 /**
- * @ngdoc controller
- * @name dat.gui:DatGuiController
- * @module dat.gui
- * @description Controller for dat.GUI
- *
- * @property {boolean} hidden True if the GUI is hidden from the page.
- * @property {boolean} closed True if the GUI is collapsed.
- */
-module.controller('DatGuiController', function DatGuiController() {});
-
-/**
  * @ngdoc directive
  * @restrict E
  * @name dat.gui:datGui
@@ -42,7 +31,7 @@ module.directive('datGui', function() {
 	return {
 		restrict: 'E',
 		transclude: true,
-		controller: 'DatGuiController',
+		controller: angular.noop,
 		controllerAs: 'datGui',
 		bindToController: {
 			hidden: '@',
