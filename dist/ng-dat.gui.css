@@ -342,12 +342,6 @@ dat-gui[light] .dg .c .slider:hover {
     background: #eee;
 }
 /**
- * Fix the input text color from the light theme
- */
-dat-gui[light] .dg .cr.string .c input:not([type="checkbox"]):not([type="button"]):not([type="color"]):not([type="file"]):not([type="hidden"]):not([type="image"]):not([type="radio"]):not([type="range"]):not(:focus) {
-    color: #777;
-}
-/**
  * Additional styles for use with the color picker
  */
 .dg .cr.string input[colorpicker] {
@@ -355,4 +349,10 @@ dat-gui[light] .dg .cr.string .c input:not([type="checkbox"]):not([type="button"
     font-weight: bold;
     color: #fff !important;
     text-shadow: rgba(0, 0, 0, 0.701961) 0px 1px 1px;
+}
+/**
+ * Fix the input text color from the light theme
+ */
+dat-gui[light] .dg .cr.string .c input:not([type="checkbox"]):not([type="button"]):not([type="color"]):not([type="file"]):not([type="hidden"]):not([type="image"]):not([type="radio"]):not([type="range"]):not(:focus) {
+    color: #777;
 }

@@ -206,7 +206,7 @@ module.directive('datGuiSlider', function() {
 			var sliderFg = angular.element(tElement[0].getElementsByClassName('slider-fg'));
 
 			ngModel.$render = function() {
-				var pct = (ngModel.$viewValue - scope.min) / scope.max * 100;
+				var pct = (ngModel.$viewValue - scope.min) / (scope.max - scope.min) * 100;
 				sliderFg.css('width', pct+'%');
 			};
 
@@ -214,7 +214,7 @@ module.directive('datGuiSlider', function() {
 				var rect = slider[0].getBoundingClientRect();
 
 				function onMouseDrag(event) {
-					var pct = (event.clientX - rect.left) / rect.width * scope.max;
+					var pct = (event.clientX - rect.left) / rect.width * (scope.max - scope.min) + scope.min;
 
 					if (scope.step) {
 						pct = Math.round(pct / scope.step) * scope.step;
