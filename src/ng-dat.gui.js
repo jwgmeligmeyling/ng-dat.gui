@@ -189,8 +189,7 @@ module.directive('datGuiSlider', function() {
 		scope: {
 			min: '@',
 			max: '@',
-			step: '@',
-			ngModel: '='
+			step: '@'
 		},
 		require: ['^ngModel', '^^datGui'],
 		template:
@@ -198,12 +197,14 @@ module.directive('datGuiSlider', function() {
 				<div class="slider-fg" style="width: 100%;"></div>\
 			</div>\
 			<div>\
-				<input type="number" ng-model="ngModel" min="{{min}}" max="{{max}}" step="{{step}}"/>\
+				<input type="number" ng-model="_model.$viewValue" min="{{min}}" max="{{max}}" step="{{step}}"/>\
 			</div>',
 		link: function(scope, tElement, iAttrs, controllers) {
-			var ngModel = controllers[0];
+			window.ngModel = controllers[0];
+			var ngModel = scope._model = controllers[0];
 			var slider = angular.element(tElement[0].getElementsByClassName('slider'));
 			var sliderFg = angular.element(tElement[0].getElementsByClassName('slider-fg'));
+			var input = tElement.find('input');
 
 			ngModel.$render = function() {
 				var pct = (ngModel.$viewValue - scope.min) / (scope.max - scope.min) * 100;
@@ -230,7 +231,12 @@ module.directive('datGuiSlider', function() {
 					.one('mouseup', function onMouseUp() {
 						angular.element(window).off('mousemove', onMouseDrag);
 					});
-			})
+			});
+
+			input.on('change keyup', function(event) {
+				ngModel.$setViewValue(ngModel.$viewValue, event);
+				ngModel.$render();
+			});
 		}
 	}
 });
